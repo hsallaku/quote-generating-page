@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+        <script src="quotes.js"></script> 
+    </head>
+    <body>
+        <div class="main">
+            <div class="card" id="card">
+                <h1>
+                    <em class="quote" id="quote">
+                        <script type="text/javascript">
+                            document.write(quotes[randomIdx].quote)
+                        </script>
+                    </em>
+                </h1>
+                <h2>
+                    <strong class="author" id="author">
+                        <script type="text/javascript">
+                            document.write("- " + quotes[randomIdx].author)
+                        </script>
+                    </strong>
+                </h2>
+            </div>
+            <button onclick="reload()" class="prevent-select" id="generate-btn">One more?</button>
+        </div>
+    </body>
+</html>
