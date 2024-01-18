@@ -41,6 +41,7 @@ function reload(){
     const quote = document.getElementById('quote')
     const author = document.getElementById('author')
     randomIdx = Math.floor(Math.random() * (quotes.length));
-    quote.textContent = quotes[randomIdx].quote;
+    quote.textContent = "\"" + quotes[randomIdx].quote + "\""
     author.textContent = "- " + quotes[randomIdx].author;
 }
+
