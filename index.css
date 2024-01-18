@@ -24,20 +24,35 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    width: 400px;
+    min-width: none;
+    max-width: 30%;
     padding: 30px;
-    background: linear-gradient(0deg, rgba(255,255,255,0.7), rgba(255,255,255,1));
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(5px);
     box-shadow: 0px 0px 10px black;
+    transition: .5s;
+}
+
+.card:hover {
+    background: rgba(255,255,153,0.7);
+    transform: scale(1.025);
+    cursor: pointer;
+}
+
+.card:active {
+    transform: scale(0.995);
 }
 
 .quote {
     font-size: 20px;
     font-weight: 400;
+    text-shadow: 0px 0px 10px whitesmoke;
 }
 
 .author {
     font-size: 18px;
     font-weight: 700;
+    text-shadow: 0px 0px 10px whitesmoke;
 }
 
 .prevent-select {
@@ -56,7 +71,7 @@ body {
     border-radius: 4px;
     outline: none;
     text-decoration: none;
-    cursor: default;
+    cursor: pointer;
     font-weight: 400;
     background: #fff;
     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.30), 0px 1px 1px rgba(0, 0, 0, .4);
@@ -66,7 +81,7 @@ body {
 
 #generate-btn:hover {
     box-shadow: inset 1px 1px 5px black;
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: transform 0.2s;
 }
 
